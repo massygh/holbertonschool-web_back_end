@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 """
-Main module to test the async_generator coroutine.
+This module contains the coroutine async_generator.
 """
 
 import asyncio
+import random
+from typing import AsyncGenerator
 
-async_generator = __import__('0-async_generator').async_generator
-
-async def print_yielded_values():
+async def async_generator() -> AsyncGenerator[float, None]:
     """
-    Collects values from the async_generator coroutine and prints them.
-    """
-    result = []
-    async for i in async_generator():
-        result.append(i)
-    print(result)
+    Coroutine that asynchronously generates 10 random numbers between 0 and 10,
+    waiting 1 second between each number.
 
-if __name__ == "__main__":
-    asyncio.run(print_yielded_values())
+    Yields:
+        float: A random floating-point number between 0 and 10.
+    """
+    for _ in range(10):
+        await asyncio.sleep(1)
+        yield random.uniform(0, 10)
