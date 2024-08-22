@@ -41,7 +41,7 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """
-        Returns a dictionary containing the current page data, the current index,
+        Returns a dictionary containing the current page data,current index,
         the next index, and the page size.
 
         Arguments:
@@ -55,8 +55,8 @@ class Server:
         - page_size: The number of items per page
         - data: The actual data for the current page
         """
-        assert isinstance(index, int) and index >= 0, "Index must be a non-negative integer."
-        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer."
+        assert isinstance(index, int) and index >= 0
+        assert isinstance(page_size, int) and page_size > 0
 
         dataset = self.indexed_dataset()
         data = []
@@ -68,7 +68,7 @@ class Server:
             index += 1
 
         next_index = index if index < len(dataset) else None
-        
+
         return {
             'index': index - len(data),
             'next_index': next_index,
