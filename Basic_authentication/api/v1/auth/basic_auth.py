@@ -7,7 +7,10 @@ import base64
 class BasicAuth(Auth):
     """ Basic Authentication class """
 
-    def decode_base64_authorization_header(self, base64_authorization_header: str) -> str:
+    def decode_base64_authorization_header(
+        self, base64_authorization_header: str
+    ) -> str:
+
         """
         Decodes a Base64-encoded authorization header
         """
