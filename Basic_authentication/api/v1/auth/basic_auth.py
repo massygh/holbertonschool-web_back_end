@@ -73,18 +73,22 @@ class BasicAuth(Auth):
         """
         auth_header = self.authorization_header(request)
         if auth_header is None:
-            return None
+            return None  # Pas d'Authorization -> accès refusé (API doit renvoyer 401 ou 403 selon config)
 
         base64_auth = self.extract_base64_authorization_header(auth_header)
         if base64_auth is None:
-            return None
+            return None  # Format Basic mal formé -> 403 Forbidden
 
         decoded_auth = self.decode_base64_authorization_header(base64_auth)
         if decoded_auth is None:
-            return None
+            return None  # Impossible de décoder -> 403 Forbidden
 
         email, password = self.extract_user_credentials(decoded_auth)
         if email is None or password is None:
-            return None
+            return None  # Pas de credentials valides -> 403 Forbidden
 
-        return self.user_object_from_credentials(email, password)
+        user = self.user_object_from_credentials(email, password)
+        if user is None:
+            return None  # Utilisateur non trouvé ou mauvais mot de passe -> 403 Forbidden
+
+        return user  # Auth OK -> 200
