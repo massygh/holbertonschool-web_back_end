@@ -5,10 +5,6 @@ from api.v1.views import app_views
 from flask import abort, jsonify, request
 from models.user import User
 from api.v1.app import auth
-from api.v1.auth.auth import Auth
-from typing import Union, Optional
-from api.v1.auth.basic_auth import BasicAuth
-
 
 @app_views.route('/users', methods=['GET'], strict_slashes=False)
 def view_all_users() -> str:
