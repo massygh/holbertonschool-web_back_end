@@ -5,7 +5,8 @@ from api.v1.views import app_views
 from models.user import User
 import os
 
-@app_views.route('/auth_session/login', methods=['POST'], strict_slashes=False)
+@app_views.route('/auth_session/login',
+                  methods=['POST'], strict_slashes=False)
 def auth_session_login():
     """ POST /api/v1/auth_session/login: login via session """
     email = request.form.get('email')
