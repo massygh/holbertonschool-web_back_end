@@ -63,7 +63,7 @@ class Auth:
     def session_cookie(self, request=None):
         """
         Retourne la valeur du cookie de session depuis la requête.
-        Le nom du cookie est défini par la variable d'environnement SESSION_NAME.
+        Le nom du cookie est défini par la variable SESSION_NAME.
         """
         if request is None:
             return None
