@@ -9,4 +9,4 @@ class SessionAuth(Auth):
     SessionAuth class for handling session authentication. (Empty for now)
     Inherits from Auth.
     """
-    pass 
+    pass
