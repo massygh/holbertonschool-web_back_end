@@ -2,7 +2,7 @@
 <img width="260" height="170" src="https://www.flaticon.com/svg/static/icons/svg/2422/2422567.svg" align="right" >
 </p>
 
-# :colombia: 0x03. Caching
+# . Caching
 
 - What a caching system is
 - What FIFO means
