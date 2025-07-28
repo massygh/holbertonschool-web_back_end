@@ -1,7 +1,3 @@
-<p>
-<img width="260" height="170" src="https://www.flaticon.com/svg/static/icons/svg/2422/2422567.svg" align="right" >
-</p>
-
 # . Caching
 
 - What a caching system is
