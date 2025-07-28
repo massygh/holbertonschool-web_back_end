@@ -24,7 +24,7 @@
 
 ## Contributing
 
--- Santiago Yanguas - Holberton Student
+-- Massinissa Ghendous  - Holberton Student
 
 ## Versioning
 
@@ -32,7 +32,7 @@ For my learning of backend web dev in Holberton School
 
 ## Authors
 
----Santiago Yanguas 946@holbertonshcool.com
+---Massinissa Ghendous 7552@holbertonshcool.com
 
 ## Files
 
