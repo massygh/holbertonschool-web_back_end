@@ -1,6 +1,4 @@
-![0x01-MySQL_Advanced](https://github.com/ronroeandassociates/assets/blob/master/images/0x01-MySQL_Advanced_banner.png)
-
-# 0x01. MySQL advanced
+# MySQL advanced
 
 ## Learning Objectives
 
